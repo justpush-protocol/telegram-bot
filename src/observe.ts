@@ -48,13 +48,10 @@ export const observeUser = (
       const { data, group } = result.data.notificationAdded;
       bot.sendMessage(
         user.id,
-        `New notification from **${group.name}**\n\n` +
-          `**${data.title}**\n${data.content}\n${
+        `New notification from ${group.name}\n\n` +
+          `${data.title}\n${data.content}\n${
             data.link ? 'More Info: ' + data.link : ''
-          }`,
-          {
-            parse_mode: 'MarkdownV2'
-          }
+          }`
       );
     }
   });
