@@ -380,13 +380,21 @@
   resolved "https://registry.yarnpkg.com/@justpush/api-types/-/api-types-0.1.0-alpha.1.tgz#1707f839635073620902f64d3f532921af5a98c6"
   integrity sha512-KueLbwBWbWNe7iC/dHmH+POo6SV7+ZHo7ziRHI78GhBO0mdrkIr+W393SWC0j9FxlUSgra5wZ2MXPYj4V4HPhw==
 
-"@justpush/sdk@^0.1.0-alpha.3":
-  version "0.1.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@justpush/sdk/-/sdk-0.1.0-alpha.3.tgz#b2f073e7e35bdab6a32ec36564abc9fb95884c35"
-  integrity sha512-KrvdrHlfamBhXLd1rvSTHLkmeEH9XqVYWfglDLGPE6XMnklf46axQkte8kyQBWWopn53Zplvc8b8dGORwX2Iyw==
+"@justpush/contracts@^0.1.0-alpha.2":
+  version "0.1.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@justpush/contracts/-/contracts-0.1.0-alpha.2.tgz#aec7e7d5ce4f07da35f0b4c3a57ec9a5677b806e"
+  integrity sha512-NV/s+Cd6/p+eUJNywASyAg1j8Usrc+xCgXdXQ1n0msbwclujGIZ9bVjST+Bg/XeMUDt2xrtdC88setOAFDdI5A==
+  dependencies:
+    uuid "^9.0.0"
+
+"@justpush/sdk@^0.1.0-alpha.4":
+  version "0.1.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@justpush/sdk/-/sdk-0.1.0-alpha.4.tgz#15ad3ca973830e86d8696db5bd567bad894971ee"
+  integrity sha512-fpSAVU6g8gRXpX4XRTGGLxd3/flck5aFcH7tlAYh6qew45ErCXUPHVuk1vJ+q5H4y3s9Hr2/Y+NnnSaA2oU90Q==
   dependencies:
     "@apollo/client" "^3.7.1"
     "@justpush/api-types" "0.1.0-alpha.1"
+    "@justpush/contracts" "^0.1.0-alpha.2"
     axios "^1.1.3"
     cross-fetch "^3.1.5"
     graphql "^16.6.0"
@@ -2000,6 +2008,11 @@ uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 validator@^13.7.0:
   version "13.7.0"
