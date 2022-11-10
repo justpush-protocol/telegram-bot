@@ -4,7 +4,6 @@ import cors from 'cors';
 import express, { Express } from 'express';
 import { getUser, resetMode, setAddress, UserMode } from './model';
 import { observeNotifcationsOfRegisteredUsers } from './observe';
-import { getTronGridURL } from './tronweb';
 import axios from 'axios';
 
 config();
@@ -13,7 +12,6 @@ const main = async () => {
   const token = process.env.TOKEN;
   const host = process.env.HOST;
   const port = process.env.PORT;
-  const network = process.env.NETWORK;
   const tronProAPIKey = process.env.TRON_PRO_API;
   const dbURL = process.env.DATABASE_URL;
 
@@ -27,10 +25,6 @@ const main = async () => {
 
   if (!port) {
     throw new Error('PORT is not defined');
-  }
-
-  if (!network) {
-    throw new Error('NETWORK is not defined');
   }
 
   if (!tronProAPIKey) {
@@ -128,7 +122,7 @@ const main = async () => {
             const address = words[0];
 
             let validTronAddress = false;
-            let host = getTronGridURL(network);
+            let host = 'https://api.trongrid.io';
             const result = await axios.post<{ result: boolean }>(
               host + '/wallet/validateaddress',
               {

@@ -7,7 +7,7 @@ import { User } from '@prisma/client';
 export const observeNotifcationsOfRegisteredUsers = async (
   bot: TelegramBot
 ) => {
-  const tronweb = getTronWeb(process.env.NETWORK || 'shasta');
+  const tronweb = getTronWeb();
   const justPush = new JustPush(tronweb);
 
   interface ObservingUsers {
