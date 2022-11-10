@@ -18,15 +18,22 @@ export const observeNotifcationsOfRegisteredUsers = async (
   const userListPollingInterval = 1000 * 5;
 
   const observeAllUsers = async () => {
+    console.log('Polling for users');
     const users = await getAllRegisteredUsers();
     const usersToObserve = users.filter((user) => !alreadyObserving[user.id]);
+    console.log('New users to observe', usersToObserve);
     usersToObserve.forEach((user) => {
       observeUser(user, bot, justPush);
       alreadyObserving[user.id] = true;
     });
   };
 
-  const timeOutId = setTimeout(observeAllUsers, userListPollingInterval);
+  while (true) {
+    await observeAllUsers();
+    await new Promise((resolve) =>
+      setTimeout(resolve, userListPollingInterval)
+    );
+  }
 };
 
 export const observeUser = (
