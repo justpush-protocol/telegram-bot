@@ -48,6 +48,9 @@ This repository
 
 ## JustPush Telegram Bot
 
-# TODO
+Search for `@justpush_bot` on Telegram. 
+And follow the video to setup your wallet address. 
+
+[![Watch the video](https://img.youtube.com/vi/RCHl2dNSeJw/default.jpg)](https://youtu.be/RCHl2dNSeJw)
 
 ---
